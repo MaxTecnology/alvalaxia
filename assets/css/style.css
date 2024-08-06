@@ -116,6 +116,7 @@ img {
     text-align: center;
     color: #f7f7f7;
     margin-top: 32px;
+    padding: 0 16px;
 }
 
 .about {
@@ -144,4 +145,10 @@ img {
     align-items: center;
     justify-content: center;
     padding: 16px;
+}
+
+.footer-video {
+    margin: auto;
+    display: block;
+    margin-bottom: 36px;
 }
