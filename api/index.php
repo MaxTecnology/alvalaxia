@@ -19,19 +19,18 @@ include __DIR__ . "/Lead.php";
 include __DIR__ . "/SendMail.php";
 
 $next = true;
-$message = "Lead adicionado com sucesso!";
+$message = "Cadastro concluído! Entraremos em contato em breve.";
 $status = false;
 
-$emailRafael = "rafael@rscontabilizando.cnt.br";
+$email1 = "rafael@rscontabilizando.cnt.br";
 $name = $_REQUEST["name"] ?? "";
 $phone = $_REQUEST["phone"] ?? "";
-
-if (strlen($name) > 7) {
+if (strlen($name) < 3) {
     $next = false;
-    $message = "Infornme um nome";
+    $message = "Informe um nome";
 }
 
-if (strlen($phone) > 7) {
+if (strlen($phone) < 8) {
     $next = false;
     $message = "Informe o telefone";
 }
@@ -48,7 +47,7 @@ $body .= "https://legalizefacil.com/leads.csv \r\n";
 
 if($next ) {
     $lead->save($name, $phone);
-    $status = SendMail::go($emailRafael, $subject, $body );
+    $status = SendMail::go($email1, $subject, $body );
 }
 
 echo json_encode([

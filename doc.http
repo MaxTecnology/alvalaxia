@@ -1,0 +1,6 @@
+
+POST https://legalizefacil.com/api/
+Content-Type: application/x-www-form-urlencoded
+
+name=Max Souza
+&phone=82996211554
