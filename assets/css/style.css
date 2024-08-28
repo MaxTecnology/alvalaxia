@@ -22,9 +22,12 @@ img {
     grid-template-columns: repeat(2, 1fr);
     background-color: #111;
     padding-bottom: 5%;
+    margin-top: 48px;
+    margin-bottom: 48px;
     @media (min-width:900px) {
         padding: 0 10%;
-        
+        margin-top: 100px;
+        margin-bottom: 100px;
     }
 }
 
@@ -36,6 +39,7 @@ img {
 }
 
 .head-line {
+
     text-transform: uppercase;
     font-size: 42px;
     font-family: sans-serif;
@@ -137,13 +141,21 @@ img {
 }
 
 .logos {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     justify-content: space-around;
     align-items: center;
     padding: 1% 10%;
+    margin-bottom: 48px;
+    @media (min-width:900px) {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 100px;
+    }
 }
 .logos img {
+    display: block;
+    margin: auto;
     width: 150px;
     height: auto;
 }
@@ -184,3 +196,10 @@ img {
     opacity: 1;
     transform: translateY(0);
   }
+
+.social-link{
+    text-decoration: none;
+    color: #f7f7f7;
+    display: block;
+    text-align: center;
+}
