@@ -148,7 +148,7 @@ img {
     padding: 1% 10%;
     margin-bottom: 48px;
     @media (min-width:900px) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         margin-bottom: 100px;
     }
 }
