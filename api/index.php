@@ -25,6 +25,7 @@ $status = false;
 $email1 = "rafael@rscontabilizando.cnt.br";
 $name = $_REQUEST["name"] ?? "";
 $phone = $_REQUEST["phone"] ?? "";
+$insta = $_REQUEST["insta"] ?? "";
 if (strlen($name) < 3) {
     $next = false;
     $message = "Informe um nome";
@@ -46,7 +47,7 @@ $body .= "para baixar todos ja cadastrados \r\n";
 $body .= "https://legalizefacil.com/leads.csv \r\n";
 
 if($next ) {
-    $lead->save($name, $phone);
+    $lead->save($name, $phone, $insta);
     $status = SendMail::go($email1, $subject, $body );
 }
 
